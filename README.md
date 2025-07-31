@@ -1,3 +1,4 @@
+![AI Research Banner](banner.png)
 # 🌟 AI Research Journey – From Foundations to Impact
 
 Welcome! 👋  
