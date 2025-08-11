@@ -161,6 +161,23 @@ while i <= 1000:
 답: i%3==0
 
 
+Q3. while문을 사용하여 다음과 같이 별(*)을 표시하는 프로그램을 작성해보자.
+ 
+*
+**
+***
+****
+*****
+i = 0
+while True:
+#### while문을 수행할 때 1씩 증가, 중간에 = 없음
+  i += 1
+  if #your code here:: break
+  #### i값이 5를 초과하면 while 문을 벗어
+  print(#your code here)
+
+답: i > 5, '*'*i
+#### print값이 신기한데 이렇게도 쓸 수 있네
 
 
 
