@@ -179,16 +179,48 @@ while True:
 답: i > 5, '*'*i
 #### print값이 신기한데 이렇게도 쓸 수 있네
 
+Q4. for문을 사용해서 1부터 100까지의 숫자를 출력해라.
+ 
+for i in range(1,101)
+#### for문은 range함수와 함께 사용됨
+#### range(시작숫자, 끝 숫자 미만)
+  print(i)
 
 
+Q5. A 학급에 총 10명의 학생이 있다. 이 학생들의 중간고사 점수는 다음과 같다.
+[ 70, 60, 55, 75, 95, 90, 80, 80, 85, 100 ]
+for문을 사용하여 A학급의 평균 점수를 구해보자.
+
+A = [70,60,55,75,95,90,80,80,85,100]
+total = 0
+
+for score in A:
+#### A리스트 안의 값을 하나씩 꺼내서 score라는 변수에 담음
+  total += #your code here
+#### 그 변수들을 이용해 계
+average = #youre code here
+#### 평균의 정의=total을 A의 길이(개수)로 나눔
+print(average)
+
+답: score, total/len(A)
 
 
+Q6. 리스트 중에서 홀수에만 2를 곱하여 저장하는 다음과 같은 코드가 있다.
+numbers = [1,2,3,4,5]
+result = []
+#### 결과를 담을 빈 리스트를 미리 만들어둠
 
+for n in numbers:
+  if n % 2 == 1:
+    result.append(n*2)
 
+ 위 코드를 리스트 컴프리헨션(list comprehension)을 사용하여 표현해보자.
+#### print 전까지 한줄로 만듦
 
-
-
-
+numbers = [1,2,3,4,5]
+result = [n*2 for n in numbers if n%2 == 1]
+#### 위에 있던 result[]안에 결과 for 변수 in 집합 if 조건
+print(result)
 
 
 
