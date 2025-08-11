@@ -148,11 +148,15 @@ i = 1
 #### 1부터
 while i <= 1000:
 #### 1000보다 작을동안 1000까지, :(문법주의, 들여쓰기)
-  if # your code here.
+  if i % 3 == 0:
   	result += i
+   #### result = result + i 랑 같은의미 → 기존 result 값에 i를 더한 값을 다시 result에 저장
+   #### result += i → 위랑 똑같은 의미지만 짧게 쓰는 축약 연산자
   i += 1
+  #### 들여쓰기는 if랑 줄 맞춰야(이거 오류때문에 무한루프로 30분 날렸음ㅎ)
 >>> print(result)
 166833
+#### 실행은 Ctrl + Alt + N
 
 답: i%3==0
 
