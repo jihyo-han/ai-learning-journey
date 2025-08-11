@@ -117,3 +117,70 @@ Q12. 파이썬은 다음처럼 동일한 값에 여러 개의 변수를 선언�
 
  [1, 4, 3]
   b가 a에 선언됐고 a의 1번째 리스트인 2가 4로 바뀌었으니, b는 [1,4,3]이 된다.
+
+
+## 2025-08-11
+
+Q1. 다음 코드의 결괏값은?
+ 
+
+a  = "Life is too short, you need python"
+
+if "wife" in a: print("wife")
+#### 만약 wife가 a 안에 있으면 wife 출력--> 없음
+elif "python" in a and "you" not in a: print("python")
+#### 그렇지 않으면, python이 a 안에 있고, you가 a에 없으면 python출력-->아님
+elif "shirt" not in a: print("shirt")
+#### 그렇지 않으면, shirt가 a안에 없으면 shirt 출력-->shirt출력
+elif "need" in a: print("need")
+#### 그렇지 않으면-->전 단계 출
+else: print("none")
+
+#### 저기 a는 정의된 a인데 순간 관사로 착각
+
+
+Q2. while문을 사용해 1부터 1000까지 자연수 중 3의 배수의 합을 구하라
+ 
+
+result = 0
+#### 처음에는 아무것도 더하지 않은 상태니까 0으로 시작
+i = 1
+#### 1부터
+while i <= 1000:
+#### 1000보다 작을동안 1000까지, :(문법주의, 들여쓰기)
+  if # your code here.
+  	result += i
+  i += 1
+>>> print(result)
+166833
+
+답: i%3==0
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
