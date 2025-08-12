@@ -225,15 +225,160 @@ print(result)
 
 
 
+## 2025-08-12
+
+Q1. 주어진 자연수가 홀수인지 짝수인지 판별해 주는 함수(is_odd)를 작성해 보자.
+ 
+
+def is_odd(number):
+  if #your code here:
+    return True
+  else:
+    return False
+
+답: number%2==1
+
+#### lamda) is_odd=lamda x : True if x%2 == 1 else False
+
+Q2. 입력으로 들어오는 모든 수의 평균 값을 계산해 주는 함수를 작성해보자. 
+(단, 입력으로 들어오는 수의 개수는 정해져 있지 않다.)
+ 
+
+def avg_numbers(#your code here):
+  result = 0
+  for i in args:
+    result += i
+  return #your code here
+
+avg_numbers(1,2)
+avg_numbers(1,2,3,4,5)
+
+답: (1) *args
+#### *은 꼭 필요(가변인자라는 뜻), args는 변수이름(근데 그냥 args많이 써)
+    (2) return/len(args)
+
+
+Q3. 다음은 두 개의 숫자를 입력받아 더하여 돌려주는 프로그램이다.
+ 
+
+input1 = input("첫 번째 숫자를 입력하세요:")
+input2 = input("두 번째 숫자를 입력하세요:")
+
+total = input1 + input2
+print("두 수의 합은 %s입니다." % total)
+위 식에 대한 출력값이다. 
+
+첫 번째 숫자를 입력하세요: 3
+두 번째 숫자를 입력하세요: 6
+두 수의 합은 36입니다.
+3과 6을 입력했을 때, 9가 아닌 36을 반환했다.
+
+이 프로그램의 오류를 수정해보자.
+
+답: 3과 6을 문자로 인식. 입력은 항상 문자열(str)이므로 숫자(정수형)으로 바꿔주어야한다.
+total=int(input1)+int(input2)
+#### int(integer: 정수) -**실수(float)**도 정수로 변환 가능 (소수점 버림)
+         -"3.5"처럼 소수점 있는 문자열은 int()로 바로 변환 불가 → 먼저 float()로 바꾼 후 int() 해야 함. a = int(float("3.5"))  # 3
+#### int → integer → 정수형 (예: -2, -1, 0, 1, 2)
+#### float → floating point number → 실수형 (예: -2.5, 0.0, 3.14)
+#### str → string → 문자열
 
 
 
 
+Q4. 다음 중 출력 결과가 다른 것 한 개를 골라보자
+ 
+
+① print("you" "need" "python")
+② print("you"+"need"+"python")
+③ print("you", "need", "python")
+④ print("".join(["you", "need", "python"]))
+
+답: 3번. ,는 띄어쓰기로
 
 
+Q5. 다음은 "text.txt"라는 파일에 "Life is too short" 문자열을 저장한 후 다시 그 파일을 읽어서 출려하는 프로그램이다.
+ 
+
+f1 = open("test.txt", 'w')
+f1.write("Life is too short")
+#### 파일을 닫지 않고 바로열면 저장안됨
+f1.close()
+#### 이렇게 닫아줘
+
+f2 = open("test.txt", 'r')
+#### r도 ''안에 넣어줘. read라는 문자 약자니까
+
+print(f2.read())
+f2.close()
+#### 여기도 닫아줘(메모리 누수 방지)
+
+방법2) with사용(with블록을 벗어나는 순간 열린 파일이 자동으로 close되어 편리한 역할을 한다.)
+with open("text.txt",'w') as f1:
+    f1. write("Life is too short!")
+with open("text.txt,'r') as f2:
+    print(f2.read())
+#### f1은 그냥 변수 이름. 연 파일을 담아둔 변수, 들여쓰기 4칸
+#### f2.read() → 전체 읽기
+     f2.readline() → 한 줄 읽기
+     f2.readlines() → 모든 줄을 리스트로 읽기
+
+   
+
+### 파일 객체 = open(파일이름, 파일 열기 모드)
+파일 열기 모드	설명
+r	읽기 모드 - 파일을 읽기만 할 때 사용
+w	쓰기 모드 - 파일에 내용을 쓸 때 사용
+a	추가 모드 - 파일의 마지막에 새로운 내용을 추가할 때 사용
+ 
+
+이 프로그램은 우리가 예상한 "Life is too short"라는 문장을 출력하지 않는다.
+
+우리가 예상한 값을 출력할 수 있도록 프로그램을 수정해보자.
+
+ 
+
+Q6. 사용자의 입력을 파일(test.txt)에 저장하는 프로그램을 작성해보자.
+(단 프로그램을 다시 실행하더라도 기존에 작성한 내용을 유지하고 새로 입력한 내용을 추가해야한다.)
+ 
+
+user_input = input("저장할 내용을 입력하세요 : ")
+#### 실제 입력값
+f = open('test.txt', #your code here)
+f.write(user_input)
+#### 변수이름
+f.write(#your code here)
+#### \n 입력하면 차곡차곡 내용 쌓임
+f.close()
+
+Tip. 기존의 내용을 유지하고 새로운 내용을 덧붙이기 위해서 'a' 추가모드를 사용한다.
+Tip. 입력된 내용을 줄 바꿈(enter)하기 위해서 \n을 삽입한다
+
+답: 'a', /n
+ 
 
 
+Q7. 다음과 같은 내용을 지닌 파일 test.txt가 있다.
+이 파일의 내용 중 'java'라는 문자열을 'python'으로 바꾸어서 저장해 보자.
+ 
 
+Life is too short
+you need java
+ 
 
+f = open('test.txt', 'r')
+#### f는 변수이름, 일단 파일 연다
+body = #your code here
+#### body도 변수이름, f 내용을 문자열로 읽어서 body라는 변수에 저장
+f.close()
+답: f.read
 
-  
+body = #your code here
+답: body.replace('java','python')
+#### body가 이미 파일 속 내용이 아니라 메모리 안의 문자열, 파일을 닫아도 body는 그대로 남아있음
+그래서 열기 전에 바꾸기 가
+
+f = open('test.txt', #your code here)
+f.write(body)
+f.close()
+답: 'w'
