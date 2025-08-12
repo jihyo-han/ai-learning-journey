@@ -382,3 +382,35 @@ f = open('test.txt', #your code here)
 f.write(body)
 f.close()
 답: 'w'
+
+
+Q8. 다음과 같이 실행할 때 입력값을 모두 더해 출력하는 스크립트(C:\doit\myargv.py)를 작성해보자
+C:\>cd doit
+C:\doit>python myargv.py 1 2 3 4 5 6 7 8 9 10
+
+#### C:\>cd doit는 **윈도우 명령 프롬프트(cmd)**에서 쓰는 디렉터리 이동 명령어
+#### C:\>현재 명령 프롬프트가 C: 드라이브의 **최상위 경로(루트)**에 있다는 표시
+#### cd = change directory (폴더 이동)
+doit라는 폴더로 이동하라는 뜻
+#### python = 파이썬 실행
+#### myargv.py = 실행할 파이썬 스크립트 파일
+
+답:
+import sys
+#### sys 모듈을 불러옴
+
+numbers = sys.argv[1:]
+#### sys.argv[1:] 현재 실행 중인 파이썬 스크립트에 명령줄 인자를 리스트로 저장
+#### 1부터 맞음. 0은 "myargv.py" 
+#### sys.argv = ["myargv.py", "1", "2", "3", ...] 
+
+result = 0
+#### result → 합계를 저장하는 변수, 0으로 초기화
+### 이거 계속 빼먹음
+for number in numbers:
+#### for number in numbers: → numbers 리스트에서 "1", "2", "3" 하나씩 꺼냄
+#### 이거도 빼먹음..
+    result += int(number)
+  #### result = result + int(number) 의미, 문자를 숫자로 바꿔서 더
+print(result)
+#### 최종 합계 출력
