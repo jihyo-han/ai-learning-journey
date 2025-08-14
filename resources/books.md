@@ -280,9 +280,22 @@ bye
 
 
 ### int
-1) 문자열 형태 숫자/소수점 숫자 -> 정수 형으로 리턴
-2) 
-###
+문자열 형태 숫자/소수점 숫자 -> 정수 형으로 리턴
+
+### isinstance
+이게 내가 원하는 타입 맞아?" 하고 물어보는 검사기
+
+print(isinstance(5, int))          # True (5는 정수)
+print(isinstance("hi", str))       # True ("hi"는 문자열)
+print(isinstance([1, 2, 3], list)) # True (리스트 맞음)
+print(isinstance(3.14, int))       # False (실수지 정수가 아님)
+
+
+
+### len
+길이(요소의 전체 개수)를 돌려주는 함수
+
+### list
 
 ###
 
@@ -294,8 +307,5 @@ bye
 
 ###
 
-###
-
-###
 
 
