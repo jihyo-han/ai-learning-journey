@@ -1,4 +1,4 @@
-<img width="533" height="830" alt="image" src="https://github.com/user-attachments/assets/819a02e8-c51e-442d-a9f5-88c3023c6263" />## [Python] 클래스(Class)
+## [Python] 클래스(Class)
 
 클래스란 말은 분야를 막론하고 정말 많이 쓰는것 같다. 그래서 더 헷갈릴 수 있으니 기록기록
 
@@ -296,3 +296,4 @@ bye
 ###
 
 ###
+
