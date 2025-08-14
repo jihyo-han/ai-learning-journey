@@ -1,4 +1,4 @@
-## [Python] 클래스(Class)
+<img width="533" height="830" alt="image" src="https://github.com/user-attachments/assets/819a02e8-c51e-442d-a9f5-88c3023c6263" />## [Python] 클래스(Class)
 
 클래스란 말은 분야를 막론하고 정말 많이 쓰는것 같다. 그래서 더 헷갈릴 수 있으니 기록기록
 
@@ -80,6 +80,9 @@ a.sub()
 
 
 
+
+
+
 ## 내장함수 특집
 Don't Reinvent The Wheel!
 이미 있는 것을 다시 만드느라 쓸데없이 시간을 낭비하지 말라.
@@ -90,6 +93,139 @@ import를 시키지 않고 바로 사용할 수 있다.
 파이썬의 내장함수 종류가 엄청 많은데
 이를 다 외울 수는 없고,
 나중에 찾아 활용할 수 있을 정도로 기억해두는 것이 좋다.
+
+### abs 절댓값
+
+### all
+x가 모두 참이면 -> Ture
+x가 하나라도 거짓이면 -> Flase
+
+>>> all([1,2,3])
+Ture
+>>> all([1,2,3,0])
+False
+- 숫자형에서 0은 False이다.
+
+scores = [80, 90, 75, 100]
+print(all(score >= 90 for score in scores))  
+False → 75, 80
+
+
+
+### any
+x가 하나라도 참 -> True
+x가 모두 거짓 -> Flase
+
+### chr
+chr(i)는 아스키 코드값을 입력받아 그 코드에 해당하는 문자를 출력
+아스키 코드란? 0~127사이 숫자를 각 하나의 문자나 기호에 대응 시켜 놓은 것
+>>> chr(97)
+'a'
+>>> chr(42)
+'*'
+
+### dir
+dir(물건) → 그 물건이 가진 버튼·기능 목록을 보여줌.
+"이거로 뭘 할 수 있는지 싹 다 보여줘!" 버튼 🚀
+
+>>> dir(list)
+['__add__',
+ '__class__',
+ '__contains__',
+ '__delattr__',
+ '__delitem__',
+ '__dir__',
+ '__doc__',
+ '__eq__',
+ '__format__',
+ '__ge__',
+ '__getattribute__',
+ '__getitem__',
+ '__gt__',
+ '__hash__',
+ '__iadd__',
+ '__imul__',
+ '__init__',
+ '__init_subclass__',
+ '__iter__',
+ '__le__',
+ '__len__',
+ '__lt__',
+ '__mul__',
+ '__ne__',
+ '__new__',
+ '__reduce__',
+ '__reduce_ex__',
+ '__repr__',
+ '__reversed__',
+ '__rmul__',
+ '__setattr__',
+ '__setitem__',
+ '__sizeof__',
+ '__str__',
+ '__subclasshook__',
+ 'append',
+ 'clear',
+ 'copy',
+ 'count',
+ 'extend',
+ 'index',
+ 'insert',
+ 'pop',
+ 'remove',
+ 'reverse',
+ 'sort']
+
+list에서 사용할 수 있는 메소드의 목록들이 리턴된다.
+
+### divmod
+divmod(a,b)는 2개의 숫자를 입력받는다.
+그리고a와 b를 나눈 몫과 나머지를 튜플 형태로 반환한다.
+
+>>> divmod(7,5)
+
+(1, 2)
+
+### enumerate
+: 열거하다
+: 반복문(for) 돌릴 때, 번호까지 같이 주는 친구
+
+fruits = ["사과", "바나나", "체리"]
+
+for i, fruit in enumerate(fruits, start=1):
+    print(i, fruit)
+
+1 사과
+2 바나나
+3 체리
+
+- i는 번호(보통 0부터 시작, start=1이니까 1부터 시작)
+    
+
+
+### eval
+실행 가능한 "문자열" 을 입력받고
+문자열을 실행한 한 결괏값을 돌려준다.
+
+>>> eval('1+2')
+
+3
+
+>>> eval("'hi'+'a'")
+
+'hia'
+
+### filter
+인공지능에서 전처리 할 때 사용을 많이 한다.
+
+###
+
+###
+
+###
+
+
+
 
 
 
