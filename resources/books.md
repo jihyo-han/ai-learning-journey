@@ -217,6 +217,75 @@ for i, fruit in enumerate(fruits, start=1):
 
 ### filter
 인공지능에서 전처리 할 때 사용을 많이 한다.
+1) 그냥 for 문 출력
+
+numbers = [1, 2, 3, 4, 5]
+
+evens = []
+
+for n in numbers:
+     if n % 2 == 0: 
+        print(n)
+>>>2
+>>>4
+➡ 화면에만 보여주고, **집에 가져올 바구니(리스트)**는 없음.
+
+vs
+
+2) filter(검사기준, 원래있던 모든 물건) 사용
+numbers = [1, 2, 3, 4, 5]
+
+def is_even(n):
+ return n % 2 == 0
+
+ result = filter(is_even, numbers)   # 짝수만 걸러서 result 객체 생성
+
+ print(list(result))   # list()로 변환해야 내용 확인 가능
+ 
+ 
+### hex
+ 정수값을 입력받고-> 16진수로 변환하여 리턴
+
+### id
+객체를 입력받아서 객체의 고유 주소값을 리턴
+
+>>> a = 3
+>>> id(3)
+93851867576896
+
+>>> id(a)
+93851867576896
+
+>>> b = a
+>>> id(b)
+93851867576896
+
+
+위 코드를 보면 3과 a와 b의 고유 주소 값이 93851867576896인 것을 볼 수 있다.
+= 이는 3과 a와 b가 모두 같은 객체임을 확인할 수 있는 방법이다.
+
+
+### input
+a=input()
+hi
+print(a)
+hi # a 안에 hi라는 '문자열' 저장
+
+ex)
+b=input("아무 말이나 입력하세요:")
+아무 말이나 입력하세요:bye <- 입력안내문 역할
+print(b)
+bye
+
+
+### int
+1) 문자열 형태 숫자/소수점 숫자 -> 정수 형으로 리턴
+2) 
+###
+
+###
+
+###
 
 ###
 
@@ -224,9 +293,6 @@ for i, fruit in enumerate(fruits, start=1):
 
 ###
 
+###
 
-
-
-
-
-
+###
