@@ -483,11 +483,54 @@ print(cal.value)    #3
      . → “그 객체 안에 있는 걸 꺼내라”는 뜻
 
 
+Q2. 객체변수 value가 100이상의 값은 가질 수 없도록 제한하는 MaxLimitCalculator 클래스를 만들어보자 
+
+
+cal = MaxLimitCalculator()
+cal.add(50)
+cal.add(60)
+
+print(cal.value)
+
+단, 반드시 다음과 같은 Calculator클래스를 상속해서 만들어야한다.
+
+class Calculator:
+def __init__(self):
+    self.value = 0
+
+def add(self,val):
+    self.value += val
+
+class MaxLimitCalculator(Calculator):
+  def add(self.val):
+    self.value += val
+
+  
+    답: 아래 추가
+    if self.value > 100:
+      self.value = 100
 
 
 
+Q3. 다음 결과를 예측해보자
+
+1. all([1,2,abs(-3)-3])
+답: False
+
+1) abs 절댓값 반환
+2) abs(-3)=3
+3) [1,2,3-3]
+4)  all([1,2,0)]
+: all은 리스트 요소 중 0있으면 False 반환
+-> all(iterable)은 모든 원소를 bool()로 바꿔서 다 참인지 확인
+-> 파이썬에서 0은 거짓(False) 으로 취급
 
 
+2. chr(ord('a'))=='a'
+#### ord는 문자 -> 아스키 코드값 출력
+#### chr는 아스키 코드값 -> 문자로 출력
 
+1) ord('a') == 97
+2) chr(97) == 'a'
 
-
+답: True
