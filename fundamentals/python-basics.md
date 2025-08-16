@@ -414,3 +414,80 @@ for number in numbers:
   #### result = result + int(number) 의미, 문자를 숫자로 바꿔서 더
 print(result)
 #### 최종 합계 출력
+
+
+
+## 2025-08-16
+
+**__init__(self): 틀에 객체 찍어내자마자 실행시켜주
+
+>>>class Dog:
+    def __init__(self):  #언더바2개씩
+        print("강아지 한 마리 태어남!")
+
+>>>d=Dog()
+강아지 한 마리 태어남!
+
+
+Q1. 다음은 Calculator 클래스이다.
+
+class Calculator:
+ def __init__(self):
+   self.value = 0
+
+   #### self.value = 0의 의미
+   self → “이 객체 자기 자신”
+   value → 객체가 가진 변수 이
+   = 0 → 객체가 처음 태어날 때 value를 0으로 만들어 줌
+   👉 즉, 계산기의 초기값을 0으로 세팅하는 
+
+   def add(self, val):
+        self.value += val
+
+#### val → 내가 더하고 싶은 숫자
+self.value += val → 현재 값에다가 val을 더해서 다시 저장
+
+
+위 클래스를 상속하는 UpgradeCalculator를 만들고 값을 뺄 수 있는 minus 메서드를 추가해보자.
+
+즉 다음과 같이 동작하는 클래스를 만들어야 한다.
+
+cal = UpgradeCalculator()
+cal.add(10)
+cal.munus(7)
+
+print(cal.value) #10에서 7을 뺀  3을 출력
+
+답:
+
+class Calculator:
+    def __init__(self):
+        self.value = 0
+
+    def add(self, val):
+        self.value += val
+
+
+class UpgradeCalculator(Calculator):   # Calculator 상속
+    def minus(self, val):              # 새로 추가한 기능
+        self.value -= val
+
+
+cal = UpgradeCalculator()
+cal.add(10)
+cal.minus(7)        
+print(cal.value)    #3
+
+#### cal → 우리가 만든 객체
+     value → 그 객체가 가지고 있는 속성(변수)
+     . → “그 객체 안에 있는 걸 꺼내라”는 뜻
+
+
+
+
+
+
+
+
+
+
