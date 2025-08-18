@@ -677,16 +677,31 @@ print(now)
 
 
 
+Q13. random 모듈을 이용해서 로또번호(1~45사이의 숫자 6개)를 "생성"해보자. (중복 숫자 안 됨)
 
 
+import random
 
+- 파이썬 표준 모듈 random 불러오기.
+- 랜덤 숫자 생성 관련 함수들(randint, shuffle, sample 등)을 쓸 수 있음
 
+result = []
+- 빈 리스트 생성
+- 나중에 로또 번호 6개를 여기에 하나씩 넣을 예정.
 
+while len(result) < 6:
+- 반복문 시작.
+- 즉, 숫자가 6개 모일 때까지 반복(숫자는 0부터 센다)
 
+  num = random.randint(1,45)
+- random → 우리가 import random 해서 불러온 모듈 이름
+- randint → 그 안에 들어있는 함수 이름 (random integer)
+- (1,45) → 함수에 넘기는 인자 (시작값, 끝값)
 
+if num not in result:
+- 뽑은 숫자(num)가 이미 result 리스트 안에 없는지 확인.
 
+result.append(num)
+- append = 리스트 뒤에 값 1개 추가
 
-
-
-
-
+print(result)
